@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="1_2 PrimeNumbers\PrimeNumbers.cs" />
     <Compile Include="1_3 finonachi\FibonachiI.cs" />
+    <Compile Include="1_4 Calculator\Expression.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

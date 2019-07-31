@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using sharp_learning_console._1_2_PrimeNumbers;
+using sharp_learning_console._1_3_finonachi;
+using sharp_learning_console._1_4_Calculator;
 
 namespace sharp_learning_console
 {
@@ -25,6 +28,26 @@ namespace sharp_learning_console
             //{
             //     Console.Write($"{a} ");
             //});
+
+
+            //calc 321 + (23*4)-7*(3+(78-3/2)/4)
+
+            //string expStr = Console.ReadLine(); 
+            //try
+            //{
+            //    Expression exp = new Expression(expStr);
+            //    exp.ConsolePrint();
+            //    Console.WriteLine();
+            //    exp.ConsolePrintRPN();
+            //    Console.WriteLine();
+            //    Console.WriteLine(exp.SolveDouble());
+            //    Console.WriteLine(exp.SolveInt());
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}    
+            
 
 
 
