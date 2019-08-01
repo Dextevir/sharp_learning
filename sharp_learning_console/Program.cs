@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using sharp_learning_console._1_2_PrimeNumbers;
 using sharp_learning_console._1_3_finonachi;
 using sharp_learning_console._1_4_Calculator;
+using sharp_learning_console._1_1_Diary;
 
 namespace sharp_learning_console
 {
@@ -32,7 +33,7 @@ namespace sharp_learning_console
 
             //calc 321 + (23*4)-7*(3+(78-3/2)/4)
 
-            //string expStr = Console.ReadLine(); 
+            //string expStr = Console.ReadLine();
             //try
             //{
             //    Expression exp = new Expression(expStr);
@@ -46,12 +47,18 @@ namespace sharp_learning_console
             //catch (Exception ex)
             //{
             //    Console.WriteLine(ex.Message);
-            //}    
-            
+            //}
 
 
+            //diary
+            //Diary.ShawNotesListConsole();
+            //Diary.ShawNote(DateTime.Now);
+            //DateTime d = DateTime.Now;
+            //d = d.AddDays(-10);
+            //Diary.ShawNote(d);
+            //Console.ReadKey();
 
-            Console.ReadKey();
+
         }
     }
 }

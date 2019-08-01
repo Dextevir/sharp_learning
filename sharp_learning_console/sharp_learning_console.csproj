@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="1_1 Diary\Diary.cs" />
     <Compile Include="1_2 PrimeNumbers\PrimeNumbers.cs" />
     <Compile Include="1_3 finonachi\FibonachiI.cs" />
     <Compile Include="1_4 Calculator\Expression.cs" />

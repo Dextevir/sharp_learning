@@ -82,12 +82,25 @@ namespace sharp_learning_console._1_4_Calculator
         }
         private bool CorrectionCheck()
         {
-            for(int i=0;i<elements.Count; i++)
+            if (elements[0].IsOperation())
+            {
+                return false;
+            }
+            if (elements[elements.Count-1].IsOperation())
+            {
+                return false;
+            }
+            for (int i=0;i<elements.Count; i++)
             {
                 if (i < elements.Count - 1)
                 {
                     if (elements[i].Type == Element.ElenentType.Number
                     && elements[i + 1].Type == Element.ElenentType.Number)
+                    {
+                        return false;
+                    }
+                    if (elements[i].Type == Element.ElenentType.Number
+                    && elements[i + 1].C == '(')
                     {
                         return false;
                     }
