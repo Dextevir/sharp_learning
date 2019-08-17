@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace sharp_learning_console._1_4_Calculator
+namespace CalculatorLib
 {
-    class Expression
+    public class Expression
     {
         public delegate void ErrorMessageType();
         class Element
         {
-            public int I { set;  get; }
+            public int I { set; get; }
             public char C { set; get; }
             public enum ElenentType
             {
@@ -20,7 +20,7 @@ namespace sharp_learning_console._1_4_Calculator
             }
             public ElenentType Type { set; get; }
 
-            public Element (int i)
+            public Element(int i)
             {
                 Type = ElenentType.Number;
                 I = i;
@@ -32,9 +32,9 @@ namespace sharp_learning_console._1_4_Calculator
             }
             public bool IsOperation()
             {
-                if(Type == ElenentType.Symbol)
+                if (Type == ElenentType.Symbol)
                 {
-                    if(C == '/'
+                    if (C == '/'
                     || C == '*'
                     || C == '-'
                     || C == '+')
@@ -50,12 +50,13 @@ namespace sharp_learning_console._1_4_Calculator
         private bool isCorrect;
         public void ConsolePrint()
         {
-            foreach(Element k in elements)
+            foreach (Element k in elements)
             {
-                if(k.Type == Element.ElenentType.Symbol)
+                if (k.Type == Element.ElenentType.Symbol)
                 {
                     Console.Write($"{k.C}");
-                }else
+                }
+                else
                 {
                     Console.Write($"{k.I}");
                 }
@@ -67,10 +68,11 @@ namespace sharp_learning_console._1_4_Calculator
             Stack<char> st = new Stack<char>();
             for (int i = 0; i < elements.Count; i++)
             {
-                if(elements[i].C == '(')
+                if (elements[i].C == '(')
                 {
                     st.Push('(');
-                }else if(elements[i].C == ')')
+                }
+                else if (elements[i].C == ')')
                 {
                     if (st.Count == 0) return false;
                     else st.Pop();
@@ -86,11 +88,11 @@ namespace sharp_learning_console._1_4_Calculator
             {
                 return false;
             }
-            if (elements[elements.Count-1].IsOperation())
+            if (elements[elements.Count - 1].IsOperation())
             {
                 return false;
             }
-            for (int i=0;i<elements.Count; i++)
+            for (int i = 0; i < elements.Count; i++)
             {
                 if (i < elements.Count - 1)
                 {
@@ -104,14 +106,14 @@ namespace sharp_learning_console._1_4_Calculator
                     {
                         return false;
                     }
-                    if (elements[i].Type == Element.ElenentType.Symbol 
-                        && elements[i].C!=')'
+                    if (elements[i].Type == Element.ElenentType.Symbol
+                        && elements[i].C != ')'
                         && elements[i + 1].IsOperation())
                     {
                         return false;
                     }
-                }                
-            }  
+                }
+            }
             return BracCheck();
         }
 
@@ -119,39 +121,41 @@ namespace sharp_learning_console._1_4_Calculator
         {
             elements = new List<Element>();
             isCorrect = true;
-            for(int i=0; i<inputStr.Length;i++)
+            for (int i = 0; i < inputStr.Length; i++)
             {
                 if (inputStr[i] == ' ') continue;
-                if (inputStr[i] <= '9' && inputStr[i] >='0')
+                if (inputStr[i] <= '9' && inputStr[i] >= '0')
                 {
                     int iElement = inputStr[i] - '0';
-                    while (inputStr[i+1] <= '9' && inputStr[i+1] >= '0')
-                    {                        
+                    while (i < inputStr.Length - 1 && inputStr[i + 1] <= '9' && inputStr[i + 1] >= '0')
+                    {
                         i++;
                         iElement *= 10;
                         iElement += inputStr[i] - '0';
                         if (i == inputStr.Length - 1) break;
                     }
                     elements.Add(new Element(iElement));
-                }else if(inputStr[i] == '/' 
-                    || inputStr[i] == '*' 
-                    || inputStr[i] == '-' 
-                    || inputStr[i] == '+' 
-                    || inputStr[i] == ')' 
-                    || inputStr[i] == '(' )
+                }
+                else if (inputStr[i] == '/'
+                   || inputStr[i] == '*'
+                   || inputStr[i] == '-'
+                   || inputStr[i] == '+'
+                   || inputStr[i] == ')'
+                   || inputStr[i] == '(')
                 {
                     char cElement = inputStr[i];
                     elements.Add(new Element(cElement));
-                }else
+                }
+                else
                 {
                     isCorrect = false;
                     throw new Exception("Incorrect expression");
                 }
             }
 
-            if(isCorrect)
+            if (isCorrect)
             {
-                if(!CorrectionCheck())
+                if (!CorrectionCheck())
                 {
                     isCorrect = false;
                     throw new Exception("Incorrect expression");
@@ -167,21 +171,23 @@ namespace sharp_learning_console._1_4_Calculator
             {
                 if (elements[i].Type == Element.ElenentType.Number) rPN.Add(elements[i]);
                 else if (elements[i].C == '(') st.Push(elements[i]);
-                else if(elements[i].C == ')')
+                else if (elements[i].C == ')')
                 {
-                    while(st.Peek().C != '(')
+                    while (st.Peek().C != '(')
                     {
                         rPN.Add(st.Pop());
                     }
                     st.Pop();
-                }else if(elements[i].C == '-' || elements[i].C == '+')
+                }
+                else if (elements[i].C == '-' || elements[i].C == '+')
                 {
-                    while(st.Count !=0 && st.Peek().IsOperation())
+                    while (st.Count != 0 && st.Peek().IsOperation())
                     {
                         rPN.Add(st.Pop());
                     }
                     st.Push(elements[i]);
-                }else
+                }
+                else
                 {
                     while (st.Count != 0 && (st.Peek().C == '*' || st.Peek().C == '/'))
                     {
@@ -190,7 +196,7 @@ namespace sharp_learning_console._1_4_Calculator
                     st.Push(elements[i]);
                 }
             }
-            while(st.Count !=0)
+            while (st.Count != 0)
             {
                 rPN.Add(st.Pop());
             }
@@ -200,19 +206,21 @@ namespace sharp_learning_console._1_4_Calculator
         {
             List<Element> rPN = ToRPN();
             Stack<double> st = new Stack<double>();
-            for(int i=0;i<rPN.Count;i++)
+            for (int i = 0; i < rPN.Count; i++)
             {
-                if(rPN[i].Type == Element.ElenentType.Number)
+                if (rPN[i].Type == Element.ElenentType.Number)
                 {
                     st.Push(rPN[i].I);
-                }else
+                }
+                else
                 {
                     double b = st.Pop();
                     double a = st.Pop();
-                    if(rPN[i].C == '+')
+                    if (rPN[i].C == '+')
                     {
                         st.Push(a + b);
-                    }else if (rPN[i].C == '-')
+                    }
+                    else if (rPN[i].C == '-')
                     {
                         st.Push(a - b);
                     }

@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sharp_learning_console", "sharp_learning_console\sharp_learning_console.csproj", "{7279F790-F902-4FE1-9AE1-0296BA4F990B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wpfCalculator", "..\wpfTry\wpfTry\wpfCalculator.csproj", "{53392480-C218-49AB-99CE-AB979883E906}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorLib", "CalculatorLib\CalculatorLib.csproj", "{6CA31B91-4F14-4F48-BE15-A47268F05D56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiaryLib", "DiaryLib\DiaryLib.csproj", "{531AEB6F-201E-4F55-A274-6E4004CB1687}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{7279F790-F902-4FE1-9AE1-0296BA4F990B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7279F790-F902-4FE1-9AE1-0296BA4F990B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7279F790-F902-4FE1-9AE1-0296BA4F990B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53392480-C218-49AB-99CE-AB979883E906}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53392480-C218-49AB-99CE-AB979883E906}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53392480-C218-49AB-99CE-AB979883E906}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53392480-C218-49AB-99CE-AB979883E906}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CA31B91-4F14-4F48-BE15-A47268F05D56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CA31B91-4F14-4F48-BE15-A47268F05D56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CA31B91-4F14-4F48-BE15-A47268F05D56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CA31B91-4F14-4F48-BE15-A47268F05D56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{531AEB6F-201E-4F55-A274-6E4004CB1687}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{531AEB6F-201E-4F55-A274-6E4004CB1687}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{531AEB6F-201E-4F55-A274-6E4004CB1687}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{531AEB6F-201E-4F55-A274-6E4004CB1687}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

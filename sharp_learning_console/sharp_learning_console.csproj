@@ -46,13 +46,17 @@
     <Compile Include="1_1 Diary\Diary.cs" />
     <Compile Include="1_2 PrimeNumbers\PrimeNumbers.cs" />
     <Compile Include="1_3 finonachi\FibonachiI.cs" />
-    <Compile Include="1_4 Calculator\Expression.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CalculatorLib\CalculatorLib.csproj">
+      <Project>{6ca31b91-4f14-4f48-be15-a47268f05d56}</Project>
+      <Name>CalculatorLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

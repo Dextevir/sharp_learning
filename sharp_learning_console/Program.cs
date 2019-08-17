@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using sharp_learning_console._1_2_PrimeNumbers;
 using sharp_learning_console._1_3_finonachi;
-using sharp_learning_console._1_4_Calculator;
 using sharp_learning_console._1_1_Diary;
 
 namespace sharp_learning_console
@@ -36,7 +35,7 @@ namespace sharp_learning_console
             //string expStr = Console.ReadLine();
             //try
             //{
-            //    Expression exp = new Expression(expStr);
+            //    CalculatorLib.Expression exp = new CalculatorLib.Expression(expStr);
             //    exp.ConsolePrint();
             //    Console.WriteLine();
             //    exp.ConsolePrintRPN();
@@ -56,7 +55,7 @@ namespace sharp_learning_console
             //DateTime d = DateTime.Now;
             //d = d.AddDays(-10);
             //Diary.ShawNote(d);
-            //Console.ReadKey();
+            Console.ReadKey();
 
 
         }
