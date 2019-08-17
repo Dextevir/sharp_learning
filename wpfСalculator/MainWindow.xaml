@@ -1,0 +1,34 @@
+﻿<Window x:Class="wpfTry.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpfTry"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="ListBox" HorizontalAlignment="Left" Height="353" Margin="21,10,0,0" VerticalAlignment="Top" Width="248"/>
+        <Button x:Name="Button1" Content="1" HorizontalAlignment="Left" Height="40" Margin="414,33,0,0" VerticalAlignment="Top" Width="40" Click="Button1_Click"/>
+        <Button x:Name="Button2" Content="2" HorizontalAlignment="Left" Height="40" Margin="459,33,0,0" VerticalAlignment="Top" Width="40" Click="Button2_Click"/>
+        <Button x:Name="Button3" Content="3" HorizontalAlignment="Left" Height="40" Margin="504,33,0,0" VerticalAlignment="Top" Width="40" Click="Button3_Click"/>
+        <Button x:Name="Button4" Content="4" HorizontalAlignment="Left" Height="40" Margin="549,33,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="3.068,0.707" Click="Button4_Click"/>
+        <Button x:Name="Button5" Content="5" HorizontalAlignment="Left" Height="40" Margin="594,33,0,0" VerticalAlignment="Top" Width="40" Click="Button5_Click"/>
+        <Button x:Name="Button6" Content="6" HorizontalAlignment="Left" Height="40" Margin="414,78,0,0" VerticalAlignment="Top" Width="40" Click="Button6_Click"/>
+        <Button x:Name="Button7" Content="7" HorizontalAlignment="Left" Height="40" Margin="459,78,0,0" VerticalAlignment="Top" Width="40" Click="Button7_Click"/>
+        <Button x:Name="Button8" Content="8" HorizontalAlignment="Left" Height="40" Margin="504,78,0,0" VerticalAlignment="Top" Width="40" Click="Button8_Click"/>
+        <Button x:Name="Button9" Content="9" HorizontalAlignment="Left" Height="40" Margin="549,78,0,0" VerticalAlignment="Top" Width="40" Click="Button9_Click"/>
+        <Button x:Name="Button0" Content="0" HorizontalAlignment="Left" Height="40" Margin="594,78,0,0" VerticalAlignment="Top" Width="40" Click="Button0_Click"/>
+        <Button x:Name="PlusButton" Content="+" HorizontalAlignment="Left" Height="40" Margin="414,165,0,0" VerticalAlignment="Top" Width="40" Click="PlusButton_Click"/>
+        <Button x:Name="MinusButton" Content="-" HorizontalAlignment="Left" Height="40" Margin="478,165,0,0" VerticalAlignment="Top" Width="40" Click="MinusButton_Click"/>
+        <Button x:Name="MultButton" Content="*" HorizontalAlignment="Left" Height="40" Margin="539,165,0,0" VerticalAlignment="Top" Width="40" Click="MultButton_Click"/>
+        <Button x:Name="DevideButton" Content="/" HorizontalAlignment="Left" Height="40" Margin="414,227,0,0" VerticalAlignment="Top" Width="40" Click="DevideButton_Click"/>
+        <Button x:Name="LeftBrButton" Content="(" HorizontalAlignment="Left" Height="40" Margin="478,227,0,0" VerticalAlignment="Top" Width="40" Click="LeftBrButton_Click"/>
+        <Button x:Name="RightBrButton" Content=")" HorizontalAlignment="Left" Height="40" Margin="539,227,0,0" VerticalAlignment="Top" Width="40" Click="RightBrButton_Click"/>
+        <Button x:Name="SolveButton" Content="=" HorizontalAlignment="Left" Height="40" Margin="635,202,0,0" VerticalAlignment="Top" Width="40" Click="SolveButton_Click"/>
+        <Button x:Name="CleanButton" Content="Очистить" HorizontalAlignment="Left" Height="40" Margin="414,310,0,0" VerticalAlignment="Top" Width="104" Click="CleanButton_Click"/>
+        <Button x:Name="BSButton" Content="&lt;-" HorizontalAlignment="Left" Height="40" Margin="549,310,0,0" VerticalAlignment="Top" Width="110" Click="BSButton_Click"/>
+    </Grid>
+</Window>
